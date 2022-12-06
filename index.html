@@ -1,22 +1,30 @@
 <!DOCTYPE html>
+<link rel="stylesheet" href="styles.css">
 <head>
     <meta charset="UTF-8">
     <title>Asteroids</title>
     <style></style>
 </head>
-<body>
+<body> 
+    <h1 class="title">ASTEROIDS</h1>
     <canvas id="gameCanvas" width="700" height="500"></canvas>
+    <div class = "controls-container">
+        <h1 class="controls">W - Thrust</h1>
+        <h1 class="controls">A - Left Turn</h1>
+        <h1 class="controls">S - Right Turn</h1>
+        <h1 class="controls">SPACE - Shoot</h1>
+    </div>
     <script>
         const FPS = 30;
         const SHIP_SIZE = 30;
         const TURN_SPEED = 360; //turn speed in deg per sec
         const SHIP_THRUST = 5; //acceleration of ship in pixels per sec per sec
         const FRICTION = 0.7; //friction coefficient of space where 0 = no firction 1 = max friction
-        const ROIDS_NUM = 1; //starting number of asteroids
+        const ROIDS_NUM = 4; //starting number of asteroids
         const ROIDS_SIZE = 100; //Starting size in pixels
         const ROIDS_VERT = 10; //Average num vertices on each asteroid
         const ROID_SPD = 50; //Max starting speed in pixels per sec
-        const ROIDS_JAG = 0.4 //jaggedness of asteroids 0 = none 1 = max
+        const ROIDS_JAG = 0.3 //jaggedness of asteroids 0 = none 1 = max
         const SHOW_BOUNDING = false; //Collision bounding
         const SHIP_EXPLODE_DUR = 0.3; //Duration of ships explosion
         const SHIP_INV_DUR = 3; //Duration of invisibility at start in sec
